@@ -17,9 +17,9 @@ parser = argparse.ArgumentParser()
 if config.init_comet:
     # Create an experiment with your api key
     experiment = Experiment(
-        api_key="cH7thitHTx55ckfvbotDOO4Ox",
-        project_name="emoji_prediction",
-        workspace="arielblo",
+        api_key="",
+        project_name="",
+        workspace="",
     )
 
 else:

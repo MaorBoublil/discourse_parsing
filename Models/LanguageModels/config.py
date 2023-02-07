@@ -1,5 +1,5 @@
-data_path = '/sise/home/arielblo/nlp_project/data/'
-save_path = '/sise/home/arielblo/nlp_project/'
+data_path = '/sise/home/****/nlp_project/data/'
+save_path = '/sise/home/****/nlp_project/'
 data_split = 'by_class' # NB option
 val = True
 joint_bert = True

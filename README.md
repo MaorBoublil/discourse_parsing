@@ -24,7 +24,8 @@ The last model is a tabular model that receives various features based on the di
 Our results showed that the sentiment model outperformed the two-input models and the model presented by [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109) in the labels that referred to {\it Tone \& Style}. 
 These results settle with our hypothesis that exploiting a language model that was trained for sentiment analysis tasks will manage to perform best on such labels.
 Additionally, we have seen that adding the context of the comment (parent) can improve the prediction when the label considers conversation structure.
-Comparing ourselves to [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109) that used 31 classifiers (one for each label), we managed to improve their performance with the meta-learner model in 8 labels using only 2 models (sentiment model and two-input model).
+Comparing ourselves to [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109) that used 31 classifiers (one for each label), we managed to improve their performance with the meta-learner model in 8 labels using only 2 models (sentiment model and two-input model). 
+
 
 ## Results
 Label | F1 - Paper | F1 - Sentiment | F1 - Two-inputs | F1-Meta Model

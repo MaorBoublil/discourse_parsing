@@ -5,7 +5,7 @@ NLP Course Project - 372.2.5702 - BGU
 ## Introduction
 BLA BLA
 ## Results
-Metric | F1 - Paper | F1 - Sentiment | F1 - Two-inputs | F1-Meta Model
+Label | F1 - Paper | F1 - Sentiment | F1 - Two-inputs | F1-Meta Model
 --- | --- | --- | --- | ---
 CounterArgument | 0.939 | 0.777 | 0.781 | 0.757
 Clarification | 0.817 | 0.362 | 0.319 | 0.323

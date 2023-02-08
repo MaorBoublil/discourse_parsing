@@ -2,6 +2,13 @@
 NLP Course Project - 372.2.5702 - BGU 
 
 [Presentation](https://docs.google.com/presentation/d/1b1K0iT20VTpjrPteQPVNUZYxe3mBA29qSkxoz5BED64/edit#slide=id.p)
+
+## Authors
+- Ariel Blobstein
+- Maor Boublil
+- Shaked Almog
+- Guy Zaidman
+
 ## Introduction
 BLA BLA
 ## Results

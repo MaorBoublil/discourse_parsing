@@ -2,7 +2,8 @@
 NLP Course Project - 372.2.5702 - BGU 
 
 [Presentation](https://docs.google.com/presentation/d/1b1K0iT20VTpjrPteQPVNUZYxe3mBA29qSkxoz5BED64/edit#slide=id.p)
-
+## Introduction
+BLA BLA
 ## Results
 Metric | F1 - Paper | F1 - Sentiment | F1 - Two-inputs | F1-Meta Model
 --- | --- | --- | --- | ---

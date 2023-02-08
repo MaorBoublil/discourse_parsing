@@ -10,7 +10,22 @@ NLP Course Project - 372.2.5702 - BGU
 - Guy Zaidman
 
 ## Introduction
-BLA BLA
+Online discussion is a domain that has gained increased attention in recent years, as people increasingly rely on online forums, social media, and other online platforms to share opinions, discuss current events, and more. One area of study within this domain is discourse parsing, which involves identifying the relationships and discourse relations between different elements in a text. This is particularly challenging in the case of online discussions, which are often contentious, polarized, and non-convergent.
+
+To address these challenges, [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109/17912) have developed an annotation scheme for discourse parsing, created a labeled conversational dataset, and presented a method for the task of discourse parsing. The dataset from the original article consists of conversations from the subreddit called Change My View (CMV) was annotated with 31 different labels. In this article, we take a different approach, using a stacked generalization ensemble \cite{wolpert1992stacked} for parsing online discourse. This involves combining predictions from multiple models to improve the accuracy of discourse parsing.
+
+Since the labels can be divided into 4 categories, each with its own characteristics, we decided to use different machine-learning strategies that are known to perform better on different tasks. We hypothesized that these strategies could predict a subset of labels better than a single model for each label. Additionally, we hypothesized that combining these classifiers together in a stacked generalization ensemble could improve the ability to predict discourse labels. 
+
+Our ensemble consists of three different models with unique characteristics, chosen based on previous work in the discourse parsing field and our analysis of the data. 
+One of the models we stacked is a fined-tuned model that was used for sentiment analysis since this task was proven to contribute to discourse parsing [Wolpert, 1992](https://www.sciencedirect.com/science/article/abs/pii/S0893608005800231). 
+Another model we stacked is a two-input model that receives both the comment and the parent's comment as input. We chose to use both comments due to the fact that many labels are associated with comments where an understanding of prior comments is crucial for accurate identification. 
+The last model is a tabular model that receives various features based on the discourse parsing literature and pre-deep learning strategies for NLP. Based on their performances on the dataset, we stacked the first two models into an XGBoost model, e.g. the meta-learner. 
+
+Our results showed that the sentiment model outperformed the two-input models and the model presented by [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109/17912) in the labels that referred to {\it Tone \& Style}. 
+These results settle with our hypothesis that exploiting a language model that was trained for sentiment analysis tasks will manage to perform best on such labels.
+Additionally, we have seen that adding the context of the comment (parent) can improve the prediction when the label considers conversation structure.
+Comparing ourselves to [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109/17912) that used 31 classifiers (one for each label), we managed to improve their performance with the meta-learner model in 8 labels using only 2 models (sentiment model and two-input model).
+
 ## Results
 Label | F1 - Paper | F1 - Sentiment | F1 - Two-inputs | F1-Meta Model
 --- | --- | --- | --- | ---

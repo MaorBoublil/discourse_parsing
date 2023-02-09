@@ -6,7 +6,7 @@ from torch.nn import CrossEntropyLoss
 import os
 import subprocess as sp
 import config
-from transformers import AutoModelForSequenceClassification, BertForSequenceClassification
+from transformers import AutoModelForSequenceClassification, BertForSequenceClassification, BertModel, AlbertModel, AlbertForSequenceClassification
 from AsymetricLoss import AsymmetricLoss
 
 
@@ -33,7 +33,7 @@ class BertClassifier(nn.Module):
         if not model:
             # self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased', output_hidden_states=False,
             #                                       output_attentions=False, num_labels=31)
-            self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased', output_hidden_states=False,
+            self.bert = AlbertModel.from_pretrained('albert-base-v2', output_hidden_states=False,
                                                             output_attentions=False, num_labels=config.num_labels)
         else:
             self.model = model

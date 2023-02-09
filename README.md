@@ -21,7 +21,7 @@ One of the models we stacked is a fined-tuned model that was used for sentiment 
 Another model we stacked is a two-input model that receives both the comment and the parent's comment as input. We chose to use both comments due to the fact that many labels are associated with comments where an understanding of prior comments is crucial for accurate identification. 
 The last model is a tabular model that receives various features based on the discourse parsing literature and pre-deep learning strategies for NLP. Based on their performances on the dataset, we stacked the first two models into an XGBoost model, e.g. the meta-learner. 
 
-Our results showed that the sentiment model outperformed the two-input models and the model presented by [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109) in the labels that referred to {\it Tone \& Style}. 
+Our results showed that the sentiment model outperformed the two-input models and the model presented by [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109) in the labels that referred to <i>Tone & Style</i>. 
 These results settle with our hypothesis that exploiting a language model that was trained for sentiment analysis tasks will manage to perform best on such labels.
 Additionally, we have seen that adding the context of the comment (parent) can improve the prediction when the label considers conversation structure.
 Comparing ourselves to [Zakharov et al.](https://ojs.aaai.org/index.php/ICWSM/article/view/18109) that used 31 classifiers (one for each label), we managed to improve their performance with the meta-learner model in 8 labels using only 2 models (sentiment model and two-input model). 

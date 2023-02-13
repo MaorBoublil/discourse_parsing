@@ -1,6 +1,5 @@
-data_path = '/sise/home/****/nlp_project/data/'
-save_path = '/sise/home/****/nlp_project/'
-data_split = 'by_class' # NB option
+data_path = ''
+save_path = ''
 val = True
 joint_bert = True
 models = 1 # Number of inputs
@@ -13,7 +12,6 @@ batch_size = 32
 two_input_flag = True if models == 2 else False
 init_comet = False
 max_seq_len = 300
-COLUMN_LIST = ['text_wo_emoji', 'new_highlight', 'class_number', 'label']
 col_names = ['clean_text', 'p_text']
 experiment_name = 'sentiment_bert'
 two_bert = ''
